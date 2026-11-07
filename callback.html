@@ -1,0 +1,10 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font-family:Georgia,serif;max-width:720px;margin:40px auto;padding:0 16px;line-height:1.6;color:#1d1a16;background:#f7f2ea}h1{color:#7a4b0f}a{color:#7a4b0f}code{background:#eee3d0;padding:4px 8px;border-radius:4px;font-size:1.1em;word-break:break-all}</style><title>Autorización TikTok</title></head><body>
+<h1>Autorización de TikTok</h1>
+<p id="msg">Copia este código y pégalo en Claude Code:</p>
+<p><code id="code">—</code></p>
+<script>
+const p=new URLSearchParams(location.search);
+const c=p.get('code'), e=p.get('error');
+document.getElementById('code').textContent = c ? c + (p.get('state') ? '  (state: ' + p.get('state') + ')' : '') : (e ? 'Error: ' + e + ' ' + (p.get('error_description')||'') : 'No llegó ningún código.');
+</script>
+</body></html>
